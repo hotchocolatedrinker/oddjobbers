@@ -79,11 +79,11 @@ header {
 }
 
 .oj-header-image-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 1vw;
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 0.5vw;
+    width: max-content;
     margin: 0 auto;
     padding: 0;
 }
@@ -133,9 +133,7 @@ header {
 }
 
 .about-content {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
+    overflow: hidden;
 }
 
 .about-desc {
@@ -147,12 +145,13 @@ header {
 }
 
 .about-image {
-    float: right;
     width: 25%;
     height: auto;
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
+    margin: 1.5rem auto;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
 }
 
 .contact {
